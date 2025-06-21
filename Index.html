@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plan de Marketing 9:16 - 4Life</title>
+    <style>
+        :root {
+            --brand-blue: #003366;
+            --accent-green: #5cb85c;
+            --light-gray-bg: #f0f2f5;
+            --text-dark: #1c1e21;
+            --text-light: #65676b;
+            --white: #ffffff;
+            --shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&display=swap');
+
+        body, html {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #e9ebee;
+            font-family: 'Inter', sans-serif;
+            overflow: hidden; /* Evita el scroll del body */
+        }
+
+        .phone-frame {
+            width: 100%;
+            height: 100%;
+            max-width: 450px; /* Ancho máximo para no ser gigante en desktop */
+            max-height: 95vh; /* Altura máxima para dejar un margen */
+            aspect-ratio: 9 / 16;
+            background: var(--light-gray-bg);
+            border-radius: 40px;
+            box-shadow: 0 0 40px rgba(0,0,0,0.15);
+            overflow: hidden;
+            position: relative;
+            display: flex;
+        }
+
+        main {
+            width: 100%;
+            height: 100%;
+            overflow-y: auto; /* Permite el scroll DENTRO del frame */
+            scroll-behavior: smooth;
+            scroll-snap-type: y mandatory; /* Magia para el "snap" */
+            -ms-overflow-style: none;  /* IE and Edge */
+            scrollbar-width: none;  /* Firefox */
+        }
+        main::-webkit-scrollbar {
+            display: none; /* Chrome, Safari and Opera */
+        }
+
+        .slide {
+            width: 100%;
+            height: 100%;
+            scroll-snap-align: start; /* Cada slide se alinea al inicio */
+            flex-shrink: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 5vh 25px; /* Padding responsivo a la altura */
+            box-sizing: border-box;
+            text-align: center;
+        }
+        
+        #portada {
+            background: linear-gradient(160deg, var(--brand-blue) 0%, #005f9e 100%);
+            color: var(--white);
+        }
+        
+        .cover-content h1 {
+            font-size: clamp(2.5rem, 12vw, 4.5rem);
+            font-weight: 800;
+            margin: 0;
+            line-height: 1.1;
+        }
+
+        .cover-content p {
+            font-size: clamp(1rem, 4.5vw, 1.4rem);
+            font-weight: 400;
+            opacity: 0.85;
+            margin: 15px 0 30px 0;
+            max-width: 90%;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background-color: var(--accent-green);
+            color: var(--white);
+            border: none;
+            border-radius: 50px;
+            padding: 15px 35px;
+            font-size: clamp(0.9rem, 4vw, 1.1rem);
+            font-weight: 700;
+            cursor: pointer;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: transform 0.2s;
+            text-decoration: none;
+        }
+        .cta-button:active {
+            transform: scale(0.96);
+        }
+
+        .card {
+            background: var(--white);
+            border-radius: 20px;
+            padding: 7%;
+            box-shadow: var(--shadow);
+            width: 90%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            gap: 1.5vh;
+        }
+
+        .card-header .plan-name {
+            font-size: clamp(1.6rem, 7vw, 2.2rem);
+            font-weight: 800;
+            color: var(--brand-blue);
+            margin: 0;
+        }
+        
+        .card-header .icon {
+            font-size: 1.5em;
+        }
+
+        .investment-details .daily-investment {
+            font-size: clamp(3rem, 13vw, 4.5rem);
+            font-weight: 800;
+            color: var(--text-dark);
+            line-height: 1;
+        }
+
+        .investment-details .daily-investment span {
+            font-size: 0.4em;
+            font-weight: 400;
+            color: var(--text-light);
+            display: block;
+        }
+
+        .results-section .results-title {
+            font-size: clamp(0.8rem, 3.5vw, 1rem);
+            color: var(--text-light);
+            margin: 0 0 5px 0;
+            text-transform: uppercase;
+        }
+
+        .results-section .results-value {
+            font-size: clamp(1.8rem, 8vw, 2.5rem);
+            font-weight: 800;
+            color: var(--brand-blue);
+            margin: 0;
+        }
+        
+        .next-button {
+            margin-top: 3vh;
+            width: 100%;
+            padding: 18px;
+            background-color: var(--brand-blue);
+        }
+        
+        .final-disclaimer {
+            font-size: clamp(0.7rem, 2.5vw, 0.8rem);
+            color: var(--text-light);
+            line-height: 1.5;
+            text-align: center;
+            margin-top: 2vh;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="phone-frame">
+        <main id="presentation-container">
+            <!-- PORTADA -->
+            <section class="slide" id="portada">
+                <div class="cover-content">
+                    <h1>Plan de Marketing</h1>
+                    <p>Campañas de publicidad para promover y vender los productos 4Life.</p>
+                    <a href="#plan-arranque" class="cta-button">Ver Proyecciones</a>
+                </div>
+            </section>
+
+            <!-- PROYECCIÓN 1 -->
+            <section class="slide" id="plan-arranque">
+                <div class="card">
+                    <div class="card-header"><p class="plan-name">Plan Arranque <span class="icon">🚀</span></p></div>
+                    <div class="investment-details"><p class="daily-investment">$5 <span>/ por día</span></p></div>
+                    <div class="results-section">
+                        <p class="results-title">Conversaciones Potenciales / Semana</p>
+                        <p class="results-value">18 - 70</p>
+                    </div>
+                </div>
+                <a href="#plan-crecimiento" class="cta-button next-button">Siguiente</a>
+            </section>
+
+            <!-- PROYECCIÓN 2 -->
+            <section class="slide" id="plan-crecimiento">
+                 <div class="card">
+                    <div class="card-header"><p class="plan-name">Plan Crecimiento <span class="icon">📈</span></p></div>
+                    <div class="investment-details"><p class="daily-investment">$7 <span>/ por día</span></p></div>
+                    <div class="results-section">
+                        <p class="results-title">Conversaciones Potenciales / Semana</p>
+                        <p class="results-value">25 - 98</p>
+                    </div>
+                </div>
+                <a href="#plan-acelerador" class="cta-button next-button">Siguiente</a>
+            </section>
+
+            <!-- PROYECCIÓN 3 -->
+            <section class="slide" id="plan-acelerador">
+                 <div class="card">
+                    <div class="card-header"><p class="plan-name">Plan Acelerador <span class="icon">⚡️</span></p></div>
+                    <div class="investment-details"><p class="daily-investment">$10 <span>/ por día</span></p></div>
+                    <div class="results-section">
+                        <p class="results-title">Conversaciones Potenciales / Semana</p>
+                        <p class="results-value">35 - 140</p>
+                    </div>
+                </div>
+                <a href="#plan-dominador" class="cta-button next-button">Siguiente</a>
+            </section>
+
+            <!-- PROYECCIÓN 4 -->
+            <section class="slide" id="plan-dominador">
+                 <div class="card">
+                    <div class="card-header"><p class="plan-name">Plan Dominador <span class="icon">🏆</span></p></div>
+                    <div class="investment-details"><p class="daily-investment">$15 <span>/ por día</span></p></div>
+                    <div class="results-section">
+                        <p class="results-title">Conversaciones Potenciales / Semana</p>
+                        <p class="results-value">53 - 210</p>
+                    </div>
+                </div>
+                <a href="#gestion-campana" class="cta-button next-button">Ver Servicio</a>
+            </section>
+            
+            <!-- LÁMINA FINAL -->
+            <section class="slide" id="gestion-campana">
+                <div class="card">
+                    <div class="card-header"><p class="plan-name">Gestión de Campaña <span class="icon">⚙️</span></p></div>
+                    <div class="investment-details"><p class="daily-investment">$35 <span>/ por la semana</span></p></div>
+                    <div class="results-section">
+                        <p class="final-disclaimer"><strong>Importante:</strong> Los resultados mostrados son una estimación basada en promedios de la industria. El rendimiento real puede variar según factores como la segmentación, la calidad del anuncio y las condiciones del mercado.</p>
+                    </div>
+                </div>
+                <a href="#portada" class="cta-button next-button">Volver al Inicio</a>
+            </section>
+        </main>
+    </div>
+
+</body>
+</html>
